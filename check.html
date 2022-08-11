@@ -4,14 +4,26 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php include "/dbinfo.inc"; ?>
 <html>
 	<head>
 		<title>UVProtect</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 	</head>
 	<body class="no-sidebar is-preload">
+		<?php
+
+		/* Connect to MySQL and select the database. */
+		$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+		
+		if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+  		$database = mysqli_select_db($connection, DB_DATABASE);
+
+		?>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -47,7 +59,9 @@
 									<section class="col-12-narrower feature">
 										
 										<header>
-											<h2>Enter your Suburb to find personalised UV information</h2>
+											<h2>Enter your Suburb to find personalised UV information
+											
+											</h2>
 										</header>
 										<form method="post" action="#">
 											<div class="row aln-center">
