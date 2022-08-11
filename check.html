@@ -60,7 +60,29 @@
 										
 										<header>
 											<h2>Enter your Suburb to find personalised UV information
-											
+												<table border="1" cellpadding="2" cellspacing="2">
+													<tr>
+													  <td>ID</td>
+													  <td>POSTCODE</td>
+													  <td>SUBURB</td>
+													  <td>STATE</td>
+													  <td>LATITUDE</td>
+													  <td>LONGITUDE</td>
+													</tr>
+													<?php
+														$result = mysqli_query($connection, "SELECT * FROM suburb LIMIT 10");
+														while($query_data = mysqli_fetch_row($result)) {
+															echo "<tr>";
+															echo "<td>",$query_data[0], "</td>",
+																"<td>",$query_data[1], "</td>",
+																"<td>",$query_data[2], "</td>",
+																"<td>",$query_data[3], "</td>",
+																"<td>",$query_data[4], "</td>",
+																"<td>",$query_data[5], "</td>";
+															echo "</tr>";
+														}
+													?>
+												</table>
 											</h2>
 										</header>
 										<form method="post" action="#">
