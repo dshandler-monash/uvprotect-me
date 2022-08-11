@@ -1,10 +1,14 @@
+<?php include "/dbinfo.inc.php"; ?>
+
+<?php
+
 <!DOCTYPE HTML>
 <!--
 	Telephasic by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<?php include "/dbinfo.inc"; ?>
+
 <html>
 	<head>
 		<title>UVProtect</title>
@@ -14,16 +18,7 @@
 		
 	</head>
 	<body class="no-sidebar is-preload">
-		<?php
-
-		/* Connect to MySQL and select the database. */
-		$connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 		
-		if (mysqli_connect_errno()) echo "console.log(Failed to connect to MySQL: " . mysqli_connect_error() ")";
-
-  		$database = mysqli_select_db($connection, DB_DATABASE);
-
-		?>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -47,7 +42,7 @@
 				</div>
 
 			</div>
-
+			
 			<!-- Main -->
 				<div class="wrapper">
 					<div class="container" id="main">
@@ -59,32 +54,8 @@
 									<section class="col-12-narrower feature">
 										
 										<header>
-											<h2>Enter your Suburb to find personalised UV information
-												<table border="1" cellpadding="2" cellspacing="2">
-													<tr>
-													  <td>ID</td>
-													  <td>POSTCODE</td>
-													  <td>SUBURB</td>
-													  <td>STATE</td>
-													  <td>LATITUDE</td>
-													  <td>LONGITUDE</td>
-													</tr>
-													<?php
-														$result = mysqli_query($connection, "SELECT * FROM suburb LIMIT 10");
-														while($query_data = mysqli_fetch_row($result)) {
-															echo "<tr>";
-															echo "<td>",$query_data[0], "</td>",
-																"<td>",$query_data[1], "</td>",
-																"<td>",$query_data[2], "</td>",
-																"<td>",$query_data[3], "</td>",
-																"<td>",$query_data[4], "</td>",
-																"<td>",$query_data[5], "</td>";
-															echo "</tr>";
-															echo "console.log($query_data)";
-														}
-													?>
-												</table>
-											</h2>
+											<h2>Enter your Suburb to find personalised UV information</h2>
+
 										</header>
 										<form method="post" action="#">
 											<div class="row aln-center">
@@ -97,6 +68,22 @@
 													</ul>
 												</div>
 											</div>
+											<?php
+												$sql = "SELECT * FROM suburb LIMIT 10;"
+												$results = mysqli_query($conn, $sql);
+												$resultCheck = mysqli_num_rows($results);
+
+												if ($resultsCheck > 0) {
+													while ($row = mysqli_fetch_assoc($result)) {
+														echo "<div>
+															<h3>".$row['id']."</h3>
+															<h3>".$row['postcode']."</h3>
+															<h3>".$row['state']."</h3>
+															<h3>".$row['latitude']."</h3>
+															<h3>".$row[longitude]."</h3>
+														</div>";
+												}
+											?>
 										</form>
 										
 									</section>
