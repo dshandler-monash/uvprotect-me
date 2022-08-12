@@ -16,7 +16,7 @@ function httpGet(theUrl) {
 
 function get_data(el){
     var city = document.getElementById('suburb-name-id').value;
-    console.log(x);
+    console.log(city);
     var lat;
     var lon;
     switch (city) {
