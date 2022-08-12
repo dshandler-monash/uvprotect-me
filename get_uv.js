@@ -110,7 +110,7 @@ function get_data(el){
 
     var new_uv = response['current']['uvi']
     console.log(arr_forecast)
-    x.textContent = "UV-index:  " + new_uv;
+    x.textContent = x + " UV-index:  " + new_uv;
         
         
    
