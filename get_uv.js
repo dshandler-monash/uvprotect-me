@@ -108,9 +108,10 @@ function get_data(el){
     var x = document.getElementById('UV-value');
 
     var new_uv = response['current']['uvi']
+    x.textContent = city + " UV-index:  " + new_uv;
     console.log(arr_forecast)
     console.log(city)
-    x.textContent = city + " UV-index:  " + new_uv;
+    
         
         
    
