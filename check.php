@@ -4,6 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php include "/dbinfo.inc.php"; ?>
 
 <html>
 	<head>
@@ -38,7 +39,7 @@
 				</div>
 
 			</div>
-			<?php include "/dbinfo.inc.php"; ?>
+			
 			<!-- Main -->
 				<div class="wrapper">
 					<div class="container" id="main">
@@ -89,14 +90,14 @@
 										</form>
 										
 										<?php
-										$database = mysqli_select_db($connection);
-											$result = mysqli_query($conn, "SELECT * FROM suburb LIMIT 10");
+											$database = mysqli_select_db($conn, $db_database);
+											$result = mysqli_query($database, "SELECT * FROM suburb LIMIT 10");
 											while($query_data = mysqli_fetch_row($result)) {
-												echo $query_data[0], "<br>",
-													$query_data[1], "<br>",
-													$query_data[2], "<br>",
-													$query_data[3], "<br>",
-													$query_data[4], "<br>",
+												echo $query_data[0],
+													$query_data[1],
+													$query_data[2],
+													$query_data[3],
+													$query_data[4],
 													$query_data[5], "<br>";
 											}
 									?>
