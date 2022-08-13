@@ -16,7 +16,7 @@ function httpGet(theUrl) {
 
 function get_data(el){
     const cityPostcode = document.getElementById('suburb-name-id').value.split(",");
-    console.log(cityPostcode);
+    console.log(cityPostcode[0]);
     var lat;
     var lon;
     
