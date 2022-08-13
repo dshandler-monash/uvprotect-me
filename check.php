@@ -4,7 +4,18 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<?php include "/dbinfo.inc.php"; ?>
+<?php
+
+$db_server = 'uvprotect-db-instance.cqefixtrri2e.ap-southeast-2.rds.amazonaws.com';
+$db_username= 'admin';
+$db_password = 'uvprotectme_123';
+$db_database = 'location';
+
+/* Connect to MySQL and select the database. */
+$conn = mysqli_connect($db_server, $db_username, $db_password, 'Connect');
+
+
+?>
 
 <html>
 	<head>
@@ -99,7 +110,17 @@
 											</tr>
 											<?php
 												$database = mysqli_select_db($conn, $db_database);
-												
+												$result = mysqli_query($database, "SELECT * FROM suburb LIMIT 10");
+												while($query_data = mysqli_fetch_row($result)) {
+													echo "<tr>
+															<td>"$query_data[0]"</td>
+															<td>"$query_data[1]"</td>
+															<td>"$query_data[2]"</td>
+															<td>"$query_data[3]"</td>
+															<td>"$query_data[4]"</td>
+															<td>"$query_data[5]"</td>
+														</tr>";
+												}
 											?>
 										</table>
 									</section>
