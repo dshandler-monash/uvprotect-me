@@ -15,11 +15,11 @@ function httpGet(theUrl) {
 }
 
 function get_data(el){
-    var x = document.getElementById('suburb-name-id').value;
-    console.log(x);
+    var city = document.getElementById('suburb-name-id').value;
+    console.log(city);
     var lat;
     var lon;
-    switch (x) {
+    switch (city) {
         case "Albury":
             lat = -36.08,
             lon = 146.91;
@@ -105,12 +105,13 @@ function get_data(el){
         arr_date.push(forecast_date)
         
     }
-
     var x = document.getElementById('UV-value');
 
     var new_uv = response['current']['uvi']
+    x.textContent = city + " UV-index:  " + new_uv;
     console.log(arr_forecast)
-    x.textContent = "UV-index:  " + new_uv;
+    console.log(city)
+    
         
         
    

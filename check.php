@@ -56,7 +56,7 @@
 										<form method="post">
 											<div class="row aln-center">
 												<div class="col-4">
-													<input list='suburb-name' id='suburb-name-id' name="name" placeholder="Melbourne" type='text'/>
+													<input list='suburb-name' id='suburb-name-id' name="name" placeholder="Suburb" type='text'/>
 													<datalist id="suburb-name">
 														<option value="Albury">Albury</option>
 														<option value="Ballarat">Ballarat</option>
