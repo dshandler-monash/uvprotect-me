@@ -107,7 +107,7 @@
 															"<td>"$query_data[2]"</td>",
 															"<td>"$query_data[3]"</td>",
 															"<td>"$query_data[4]"</td>",
-															"<td>"$query_data[5]"</td>",;
+															"<td>"$query_data[5]"</td>";
 														"</tr>"
 												}
 											?>
