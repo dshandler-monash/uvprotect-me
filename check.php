@@ -97,7 +97,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 												<h2 class="UV_value" id="UV-value"></h2>
 											</div>
 										</form>
-										<table id="test-table" width="80%">
+										<table id="test-table" border="1" width="80%">
 											<tr>
 												<th>Column 1</th>
 												<th>Column 2</th>
