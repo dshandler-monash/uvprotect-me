@@ -69,7 +69,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 													<input list='suburb-name' id='suburb-name-id' name="name" placeholder="Suburb" type='text'/>
 													<datalist id="suburb-name">
 														<?php
-															$sql_query = "SELECT * FROM suburb LIMIT 10";
+															$sql_query = "SELECT * FROM suburb LIMIT 100";
 															$result = mysqli_query($conn, $sql_query);
 															while($query_data = mysqli_fetch_row($result)) {
 																?>
