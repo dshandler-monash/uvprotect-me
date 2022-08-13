@@ -16,7 +16,8 @@ function httpGet(theUrl) {
 
 function get_data(){
     var citySuburb = document.getElementById('suburb-name-id').value;
-    var city = document.querySelectorAll('input[value="'+citySuburb+'"');
+    console.log("input[value="+citySuburb+"]")
+    var city = document.querySelectorAll("input[value="+citySuburb+"]");
 
     console.log(citySuburb);
     console.log(city);
