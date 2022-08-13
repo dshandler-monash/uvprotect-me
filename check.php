@@ -110,7 +110,6 @@
 															<td>$query_data[5]</td>,;
 														</tr>
 												}
-											mysql_close();
 											?>
 										</table>
 									</section>
