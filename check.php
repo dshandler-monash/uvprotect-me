@@ -68,7 +68,16 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 												<div class="col-4">
 													<input list='suburb-name' id='suburb-name-id' name="name" placeholder="Suburb" type='text'/>
 													<datalist id="suburb-name">
-														<option value="Albury">Albury</option>
+														<?php
+															$sql_query = "SELECT * FROM suburb LIMIT 10";
+															$result = mysqli_query($conn, $sql_query);
+															while($query_data = mysqli_fetch_row($result)) {
+																?>
+																	<option value=""><?php echo $query_data[2]?></option>
+																<?php
+															}
+														?>
+													<!--<option value="Albury">Albury</option>
 														<option value="Ballarat">Ballarat</option>
 														<option value="Bendigo">Bendigo</option>
 														<option value="Box Hill">Box Hill</option>
@@ -85,7 +94,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 														<option value="Pakenham">Pakenham</option>
 														<option value="Phillip Island">Phillip Island</option>
 														<option value="Torquay">Torquay</option>
-													</datalist>
+													</datalist>-->
 												</div>
 												<div class="col-1">
 													<ul class="actions ">
