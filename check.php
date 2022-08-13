@@ -110,14 +110,14 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 												$sql_query = "SELECT * FROM suburb LIMIT 10";
 												$result = mysqli_query($conn, $sql_query);
 												while($query_data = mysqli_fetch_row($result)) {
-													>?
+													?>
 													<tr>
-														<td><?php echo $query_data[0];?></td>
-														<td><?php echo $query_data[1];?></td>
-														<td><?php echo $query_data[2];?></td>
-														<td><?php echo $query_data[3];?></td>
-														<td><?php echo $query_data[4];?></td>
-														<td><?php echo $query_data[5];?></td>
+														<td><?php echo $query_data[0]?></td>
+														<td><?php echo $query_data[1]?></td>
+														<td><?php echo $query_data[2]?></td>
+														<td><?php echo $query_data[3]?></td>
+														<td><?php echo $query_data[4]?></td>
+														<td><?php echo $query_data[5]?></td>
 													</tr>
 													<?php
 												}
