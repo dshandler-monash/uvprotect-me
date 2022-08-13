@@ -15,7 +15,9 @@ function httpGet(theUrl) {
 }
 
 function get_data(el){
-    var city = document.getElementById('suburb-name-id');
+    var city = document.getElementById('suburb-name-id').firstChild;
+
+    
     console.log(city);
     var lat;
     var lon;
