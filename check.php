@@ -12,7 +12,7 @@ $db_password = 'uvprotectme_123';
 $db_database = 'location';
 
 /* Connect to MySQL and select the database. */
-$conn = mysqli_connect($db_server, $db_username, $db_password, 'Connect');
+$conn = mysqli_connect($db_server, $db_username, $db_password, $db_database);
 
 
 ?>
@@ -109,8 +109,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, 'Connect');
 												<th>Column 6</th>
 											</tr>
 											<?php
-												$database = mysqli_select_db($conn, $db_database);
-												$result = mysqli_query($database, "SELECT * FROM suburb LIMIT 10");
+												$result = mysqli_query($conn, "SELECT * FROM suburb LIMIT 10");
 												while($query_data = mysqli_fetch_row($result)) {
 													echo "<tr>
 															<td>"$query_data[0]"</td>
