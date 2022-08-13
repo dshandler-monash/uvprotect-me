@@ -101,14 +101,14 @@
 												$database = mysqli_select_db($conn, $db_database);
 												$result = mysqli_query($database, "SELECT * FROM suburb LIMIT 10");
 												while($query_data = mysqli_fetch_row($result)) {
-													echo "<tr>",
-															"<td>"$query_data[0]"</td>",
-															"<td>"$query_data[1]"</td>",
-															"<td>"$query_data[2]"</td>",
-															"<td>"$query_data[3]"</td>",
-															"<td>"$query_data[4]"</td>",
-															"<td>"$query_data[5]"</td>";
-														"</tr>"
+													echo "<tr>
+															<td>"$query_data[0]"</td>
+															<td>"$query_data[1]"</td>
+															<td>"$query_data[2]"</td>
+															<td>"$query_data[3]"</td>
+															<td>"$query_data[4]"</td>
+															<td>"$query_data[5]"</td>
+														</tr>";
 												}
 											?>
 										</table>
