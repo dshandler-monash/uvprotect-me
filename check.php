@@ -98,7 +98,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 												</div>
 												<div class="col-1">
 													<ul class="actions ">
-														<li><a href="#" id="btn" class="button" onclick=get_data(this)>Search</a></li>
+														<li><a href="#" id="btn" class="button" onclick="get_data()">Search</a></li>
 													</ul>
 												</div>
 											</div>

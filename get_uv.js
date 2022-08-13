@@ -14,10 +14,11 @@ function httpGet(theUrl) {
     }
 }
 
-function get_data(el){
-    var city = document.getElementById('suburb-name-id').children;
+function get_data(){
+    var citySuburb = document.getElementById('suburb-name-id').value;
+    var city = document.querySelectorAll('input[value="'+citySuburb+'"');
 
-    
+    console.log(citySuburb);
     console.log(city);
     var lat;
     var lon;
