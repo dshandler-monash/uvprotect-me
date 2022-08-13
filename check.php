@@ -93,8 +93,8 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 														<option value="Mount Buller">Mount Buller</option>
 														<option value="Pakenham">Pakenham</option>
 														<option value="Phillip Island">Phillip Island</option>
-														<option value="Torquay">Torquay</option>
-													</datalist>-->
+														<option value="Torquay">Torquay</option>-->
+													</datalist>
 												</div>
 												<div class="col-1">
 													<ul class="actions ">
