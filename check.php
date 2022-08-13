@@ -73,7 +73,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 															$result = mysqli_query($conn, $sql_query);
 															while($query_data = mysqli_fetch_row($result)) {
 																?>
-																	<option value=""><?php echo $query_data[2]?></option>
+																	<option value="<?php echo $query_data[2]?>"><?php echo $query_data[2]?></option>
 																<?php
 															}
 														?>
