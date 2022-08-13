@@ -15,7 +15,7 @@ function httpGet(theUrl) {
 }
 
 function get_data(el){
-    var city = document.getElementById('suburb-name-id').firstChild;
+    var city = document.getElementById('suburb-name-id').children;
 
     
     console.log(city);
