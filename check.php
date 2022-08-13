@@ -98,8 +98,7 @@
 												<th>Column 6</th>
 											</tr>
 											<?php
-												$database = mysqli_select_db($conn, $db_database);
-												$result = mysqli_query($database, "SELECT * FROM suburb LIMIT 10");
+												$result = mysqli_query($db_database, "SELECT * FROM suburb LIMIT 10");
 												
 											?>
 										</table>
