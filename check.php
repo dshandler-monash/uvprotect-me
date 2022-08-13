@@ -60,7 +60,7 @@ $conn = mysqli_connect($db_server, $db_username, $db_password, $db_database, 330
 									<section class="col-12-narrower feature">
 										
 										<header>
-											<h2>Enter a Suburb to find the UV index right now</h2>
+											<h2>Enter a Suburb or postcode to find the UV index right now</h2>
 
 										</header>
 										<form method="post">
