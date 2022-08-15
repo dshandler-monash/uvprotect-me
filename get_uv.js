@@ -15,7 +15,7 @@ function httpGet(theUrl) {
 }
 
 function get_data(){
-    var citySuburb = document.getElementById('suburb-name-id').value;
+    var citySuburb = document.getElementById('suburb-name-id');
     //console.log("input[value="+citySuburb+"]")
     //var city = document.querySelectorAll("input[value="+citySuburb+"]");
     var suburb = citySuburb.split(',');
