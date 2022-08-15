@@ -18,11 +18,11 @@ function get_data(){
     var citySuburb = document.getElementById('suburb-name-id').value;
     //console.log("input[value="+citySuburb+"]")
     //var city = document.querySelectorAll("input[value="+citySuburb+"]");
-    suburb = citySuburb.split(',')
-    postcode = citySuburb.split(',')
+    var suburb = citySuburb.split(',');
+    var postcode = citySuburb.split(', ');
     console.log(citySuburb);
     console.log(suburb);
-    console.log(postcode)
+    console.log(postcode);
     var lat;
     var lon;
     
