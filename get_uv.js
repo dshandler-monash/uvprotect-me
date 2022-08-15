@@ -17,7 +17,7 @@ function httpGet(theUrl) {
 function get_data(){
 
     var citySuburb = document.querySelector('#suburb-name-id').value;
-    console.log('option[value="'+citySuburb+'"]')
+    console.log('option[value="'+citySuburb+'"]');
     var pk = document.querySelector('option[value="'+citySuburb+'"]').id;
     var suburb = citySuburb.split(',');
     var postcode = citySuburb.split(', ');
