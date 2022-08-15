@@ -15,14 +15,16 @@ function httpGet(theUrl) {
 }
 
 function get_data(){
-    var citySuburb = document.getElementById('suburb-name-id');
-    //console.log("input[value="+citySuburb+"]")
-    //var city = document.querySelectorAll("input[value="+citySuburb+"]");
+
+    var citySuburb = document.querySelector('#suburb-name-id').value;
+    console.log("input[value="+citySuburb+"]")
+    var pk = document.querySelector('option[value="'+citySuburb+'"]').id;
     var suburb = citySuburb.split(',');
     var postcode = citySuburb.split(', ');
     console.log(citySuburb);
     console.log(suburb);
     console.log(postcode);
+    console.log(pk)
     var lat;
     var lon;
     
