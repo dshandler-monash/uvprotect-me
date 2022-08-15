@@ -16,11 +16,13 @@ function httpGet(theUrl) {
 
 function get_data(){
     var citySuburb = document.getElementById('suburb-name-id').value;
-    console.log("input[value="+citySuburb+"]")
-    var city = document.querySelectorAll("input[value="+citySuburb+"]");
-
+    //console.log("input[value="+citySuburb+"]")
+    //var city = document.querySelectorAll("input[value="+citySuburb+"]");
+    suburb = citySuburb.split(', ')[0]
+    postcode = citySuburb.split(', ')[1]
     console.log(citySuburb);
-    console.log(city);
+    console.log(suburb);
+    console.log(postcode)
     var lat;
     var lon;
     
