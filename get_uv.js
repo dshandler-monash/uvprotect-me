@@ -24,7 +24,7 @@ function get_data(){
     console.log(citySuburb);
     console.log(suburb);
     console.log(postcode);
-    console.log(pk)
+    console.log(pk);
     var lat;
     var lon;
     
