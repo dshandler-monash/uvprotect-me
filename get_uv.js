@@ -26,7 +26,7 @@ function get_data(){
     var lat;
     var lon;
     
-    var url_call = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&exclude=minutely,daily,alerts&appid=29f32a874ef287325631c36c8d516251';
+    //var url_call = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&exclude=minutely,daily,alerts&appid=29f32a874ef287325631c36c8d516251';
     
     response = httpGet(url_call)
     arr_forecast = []
