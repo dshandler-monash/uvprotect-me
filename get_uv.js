@@ -18,8 +18,8 @@ function get_data(){
     var citySuburb = document.getElementById('suburb-name-id').value;
     //console.log("input[value="+citySuburb+"]")
     //var city = document.querySelectorAll("input[value="+citySuburb+"]");
-    suburb = citySuburb.split(', ')[0]
-    postcode = citySuburb.split(', ')[1]
+    suburb = citySuburb.split(',')
+    postcode = citySuburb.split(',')
     console.log(citySuburb);
     console.log(suburb);
     console.log(postcode)
